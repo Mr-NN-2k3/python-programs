@@ -1,24 +1,29 @@
 import random
-xx = 0
-while (xx != 4):
 
-    x = random.choices(["snake", "water", "gun"], k=1)[0]
-    xx = input('''1.for the snake
-               2.for the water
-               3.for the gun 
-               4.exit
-               enter the input for the game :''')
+while True:
+    x = random.choice(["snake", "water", "gun"])
+    xx = input('''1. For snake
+2. For water
+3. For gun 
+4. Exit
+Enter your choice: ''')
+
     if xx == "4":
         print("Exiting the game. Thanks for playing!")
         break
-    if xx not in ["1" , "2", "3"]:
-        print("this is invalid input")
+    elif xx not in ["1", "2", "3"]:
+        print("Invalid input, please try again.")
         continue
+    elif xx == "1":
+        xx = "snake"
+    elif xx == "2":
+        xx = "water"
+    elif xx == "3":
+        xx = "gun"
 
-    if (xx == "1" and x == "water") or (xx == "2" and x == "gun") or (xx == "1" and x == "gun"):
-        print("computer wins by having=", x, "human=", xx)
-    elif (xx == "1" and x == "snake") or (xx == "2" and x == "water") or (xx == "3" and x == "gun"):
-
-        print("Human wins the game by having:", xx, "Computer:", x)
+    if (xx == "snake" and x == "water") or (xx == "water" and x == "gun") or (xx == "gun" and x == "snake"):
+        print("\nComputer wins. You chose:", xx, "\nComputer chose:", x , "\n\n\n")
+    elif (xx == "snake" and x == "snake") or (xx == "water" and x == "water") or (xx == "gun" and x == "gun"):
+        print("\nYou win! You chose:", xx, "\nComputer chose:", x, "\n\n\n")
     else:
-        print("its a draw")
+        print("\nIt's a draw! You both chose:", xx , "\n\n\n")
