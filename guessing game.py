@@ -1,7 +1,7 @@
 import random
 import os
 
-f = open("D:\Computer Programs\Python\database\guessing_gamedb.txt", "a+")
+f = open("guessing_gamedb.txt", "a+")
 #input your desired file location above.
 
 var = random.choice(range(0, 10))
