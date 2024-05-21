@@ -1,7 +1,7 @@
 import random
 import os
 
-f = open("D:\Computer Programs\Python\database\passwords.txt", "a+")
+f = open("passwordsdb.txt", "a+")
 
 alpha = ascii(range(0, 127))
 
