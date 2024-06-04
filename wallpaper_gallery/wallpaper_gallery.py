@@ -33,7 +33,7 @@ root.config(bg="black")
 root.state("zoomed")
 
 # Directory containing the images
-imgs_dir = "D:\Computer Programs\Python\guis\wallpaper_gallery\wallpapers"
+imgs_dir = "wallpaper_gallery/wallpapers"
 
 # List all files in the directory
 wallpapers = os.listdir(imgs_dir)
